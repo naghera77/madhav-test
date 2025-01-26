@@ -1,0 +1,96 @@
+git config --global user.name "my name"
+git config --global user.email "email"
+
+git config --list    // tells how much you have done the config thing
+
+
+
+//global is used to makes changes every time in a specified id
+// whereas local is used to make changes in a repo while working in a local project for only specific time
+
+
+
+close and status
+git clone <"link">    //clone- cloning a repo on your local machine
+
+
+
+git status //status: displays the state if the code, also tells that the git code and the code in vs are same or not is there any new code or lines added in local or not
+
+
+
+ls // provide the list of the files inside a folder.
+ ls -a   // is used to see the hidden files
+
+
+untracked // new files that git doesn't yet track
+modified // changed
+staged // file is ready to be committed
+unmodified // unchanged
+
+
+
+git add <file name>  ??adds new or changed files in your working directory to the git staging area.
+
+git add .    // used to add all the files 
+
+git commit -m"some message"   //it is the record of the change
+
+git push origin main  // upload repo content to remote repo  (origin) means the by default repo we selected for main branch
+
+mkdir folder_name   // to create the new folder
+cd folder_name  // to be in that folder 
+git init   // adds the git file inside the folder
+git remote add origin <link>    // add the link of the new repo, in place of origin we can give any name
+git remote -v  // to verify remote
+git branch  // to check remote
+git branch -M main  // to rename branch
+git push origin main
+git push -u origin main // -u is used to give the name in case when you want to work for a long time in the same project and will allow you to push again with just (git push) command
+
+
+
+Branch command
+git branch // to check branch
+git branch -M main // to rename the branch
+git checkout <branch_name> // to navigate or to move to another branch
+git checkout -b <branch_name>  //to create new branch
+git branch -d <branch_name>   //to delete the branch
+
+
+branch merge code
+git diff <branch _name>   //to compare commits, branches, files and more
+git merge <branch_name>   //to merge 2 branches
+
+
+pull request: it lets you tell other about changes you've pushed to a branch in a repo on GitHub.
+git pull origin main  //used to fetch and download content from a remote repo and immediately update the local repo to match that content.
+
+
+
+resolving merge conflicts: an event that takes place when git is unable to automatically resolve diff in code between two commits.
+
+accept current change|accept incoming change|accept both changes|compare both
+
+above all provides the manual option to make the changes to the merge conflicts.
+
+undoing changes
+
+case1: staged changes //non committed changes only git add changes
+git reset <file__name>  // for only one file
+git reset   // for many files
+
+case 2: committed changed (for one commit)
+git reset HEAD~1  / ~  is know as tiled one
+
+case 3:commited changed(for many commits)
+git reset <commit hash>   // the hash can be found in the logs using "git log " command
+git reset --hard <commit hash>  // --hard allows to also makes changes  in vs code as well as github
+
+
+git log   // to see the logs
+
+
+fork: a fork is a new repo that shares code and visibility settings with the original upstream repo. fork is a rough copy.
+
+
